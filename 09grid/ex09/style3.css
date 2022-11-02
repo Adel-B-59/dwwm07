@@ -1,0 +1,57 @@
+*,::before ::after{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+  
+}
+
+
+header{
+
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    background-color: red;
+    color: white;
+
+}
+
+
+main{
+
+font-family: 'Times New Roman', Times, serif;
+font-size: 30px;
+
+
+}
+
+main>div {
+
+    display: grid;
+    background-color: grey;
+    
+}
+
+footer{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: rgb(0, 0, 0);
+   color: white;
+
+}
+
+p{
+
+    text-align: center;
+    background-color: white;
+    margin-top: -20%;
+}

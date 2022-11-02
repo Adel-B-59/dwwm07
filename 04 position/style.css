@@ -1,0 +1,71 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height:  400vh;
+}
+
+header{
+    padding: 1em;
+    background-color: slategray;
+    color: aliceblue;
+    text-align: center;
+    /* La position fixed sort de l'élément de la page et le garde toujours fixé au viewport*/
+    position: fixed;
+    width: 100%;
+    /* Indique la position sur la profondeur de l'élément, par défaut tout élément est à 0. Un nombre positif est au dessus ( plus proche de l'écran ) et un nombre négatif ( plus loins )*/
+    z-index: 1;
+    background-image: url(../css/onrm1umg87i71.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    background-color: black;
+}
+nav, main {
+    margin-top: 50px;
+    display: inline-block;
+    height: 100%;
+    padding: 2rem;
+}
+nav{
+    width: 200px;
+     background-color: rgb(216, 148, 21);
+     /* linear-gradient crée une image avec un dégradé de couleur. On peut optionnellemen lui indiquer une direction pour le dégradé. On peut ajouter autant de couleur que l'on
+     veut. On peut préciser où est ce que nos couleurs s'arrête et commence */
+     background-image: linear-gradient(45deg, blue, red, green);
+}
+nav, ul {
+    /* La position sticky garde l'élément dans le flux de la page, jusqu'à ce qu'il atteigne la position ( ici top 70px ) qui lui a été indiqué, à ce moment il suivra le 
+    scrolling tant qu'il ne sort pas de son parent.*/
+position: sticky;
+top: 70px;
+}
+
+main{
+    /* calc() permet de calculer une taille selon les différents types de valeur. ATTENTION A NE PAS OUBLIER LES ESPACES DAMN IT */   
+     width: calc(100% - 205px);
+     background-color: blueviolet;
+     /* Créer un dégradé en cercle */
+      background-image: radial-gradient(red,gree,blue,purple);
+      /* Garde l'élément dans le flux de la page, mais l'ajout des propriétés : right, left, top, bottom permet de le déplacer */
+      position: relative;
+      top: 100px;
+      right: 20px;
+}
+main p:last-child {
+    height: 300px;
+    background-image: conic-gradient (red, yellow,orange, turquoise)
+}
+
+button {
+    /* Sort l'élément du flux de la page*/
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

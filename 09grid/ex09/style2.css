@@ -1,0 +1,78 @@
+*,::before ::after{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+  
+}
+
+main{
+
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: 100px 100px 100px 100px;
+    gap: 1em;
+}
+
+main > div:nth-child(1){ 
+
+    background-color: blue;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+
+
+}
+main > div:nth-child(2){ 
+
+    background-color:rgb(161, 20, 189) ;
+  
+    grid-row-start: 1;
+    grid-row-end: 3;
+    
+}
+main > div:nth-child(3){ 
+    background-color:brown ;
+   
+    grid-row-start: 1;
+    grid-row-end: 3;
+    
+}
+main > div:nth-child(4){
+
+    background-color:chartreuse ;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+main>div {
+
+    display: grid;
+    grid-template-rows: 40% auto 1fr;
+    
+}
+main >div p{
+    grid-row: 3/4;
+    background-color: white;
+    margin: 0;
+}
+main >div h2{
+    grid-row: 2/3;
+    background-color: white;
+    margin: 0;
+}
+header{
+
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+
+}
+

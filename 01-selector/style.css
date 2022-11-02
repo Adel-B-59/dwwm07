@@ -1,0 +1,127 @@
+/* Pour sélectionner un élément et le modifier, on utilise la syntaxe qui suit :
+ selecteur { propriété :valeur; } 
+*/
+main{
+    background-color: aquamarine;
+}
+
+/* !important rends la propriété prioritaire sur toute autre */
+footer {
+    background-color: brown!important;
+}
+/* sélectionne tout p dans un main */
+main
+ p{ background-color: rgb(27, 212, 27);}
+
+/* Sélectionne tout p dans un main qui ne sont pas dans une autre balise*/
+ main > 
+ p {background-color: bisque;}
+
+ /* Frère direct ou indirect */
+
+ h3~li 
+ { background-color: cornflowerblue;}
+
+ /* premier li suivant un h3 */
+
+h3 + li 
+{ background-color: rgb(85, 107, 126);}
+
+/* Pseudo-classes */
+/* Sont écrites de façon suivante ":pseudo-classe" */
+/* Sélectionne l'élément au survol de la souris, ne fonctionne pas sur tel */
+li:hover 
+{background-color: darkgoldenrod;}
+li:nth-of-type(3) 
+{background-color: darkgreen;}
+li:nth-of-type(5) 
+{background-color: blueviolet;}
+
+/* existe aussi :nth-last-of-type() pour le dernier */
+
+li:nth-child(2) 
+{background-color: cyan;}
+
+/* Existe aussi en partant de la fin li:nth-last-child() */
+
+h1
+ a {color :brown }
+
+ /* Pour sélectionner la couleur d'un lien, taper a */
+
+ h1 a:active {
+    color: lightsalmon;
+ }
+
+ /* Quand cliquer, changer de couleur */
+
+ h1 a:focus 
+ { color: orchid;}
+
+ h1 a:visited
+ {color: purple;}
+
+ /* Sélectionne tous les span dans un p excepté le scond */
+
+ p span:not(:nth-of-type(2)) {color: magenta;
+
+ }
+
+/* Sélectionne tout ce qui n'est pas un h1 ou un a */
+
+ *:not(h1, a) {
+    font-size: 20px;
+ }
+
+ article p::first-letter {
+    font-size: 50px;
+ }
+
+ main > p::first-line {
+    font-weight: 1000;
+ }
+
+ h1::before {
+    content: "C'est faux --> ";
+ }
+
+ h1::after {
+
+    content: " Il ment ! ";
+ }
+
+ /* Before et After doivent contenir la propriété " content " */
+
+ /* Classes,ID, et attributs */
+ #MenuImportant {
+    font-size: 42px;
+    font-weight: 900;
+    color: rgb(161, 15, 149);
+ }
+
+ .peuImportant {
+
+    font-size: 12px;
+    font-weight: 400;
+    color: aqua;
+ }
+
+ a[target] {
+    
+    font-style: italic;}
+
+ a[href*= "amazon" ]
+  {
+    font-family: monospace;
+ }
+
+ a[href$=".fr"] {
+     background-color: gold;
+
+ }
+
+ a[href^="https"]::before {
+    content: "\2713";
+ }
+
+ 

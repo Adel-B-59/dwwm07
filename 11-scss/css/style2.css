@@ -1,0 +1,100 @@
+@charset "UTF-8";
+footer ul .truc1 {
+  font-size: 30px;
+}
+footer ul .truc2 {
+  font-size: 40px;
+}
+footer ul .truc3 {
+  font-size: 50px;
+}
+footer ul .truc4 {
+  font-size: 60px;
+}
+footer ul .truc5, footer ul header {
+  font-size: 70px;
+}
+
+/*@use doit être écrit avant tout autre règles.Il permet d'importer un fichier "partial" ( qui commence avec "_"). Les fichiers partials ne sont pas compilé sauf si 
+importé */
+h1 {
+  color: red;
+}
+
+h2 {
+  color: green;
+}
+
+/* Le nesting permet d'inclure des sélecteurs dans un autre sélecteur permettant ainsi de ranger les enfants dans leurs parents sans avoir répéter leurs noms.*/
+footer {
+  background-color: aquamarine;
+}
+footer .copy {
+  background-color: brown;
+}
+footer .menu {
+  background-color: darkgray;
+}
+footer .menu li {
+  background-color: slateblue;
+}
+footer .menu lihover {
+  background-color: crimson;
+}
+
+/* Les variables scss ont une syntaxe un peu plus simple et n'apparaîssent pas dans la compilation.*/
+.truc5, header {
+  background-color: violet;
+}
+
+/*Extends permet de reprendre un morceau de css et de le réutiliser à plusieurs endroits */
+main ul, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Je peux aussi l'utiliser avec le nom d'une classe afin de copier le code que j'ai appliqué à cette classe.*/
+main ul {
+  flex-direction: column;
+}
+
+/**/
+.copy {
+  background-color: mediumorchid;
+  font-size: 4em;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Une fonction scss permet de donner une valeur en entrée pour en récupérer une différente en sortie. Par ex, ici on a une fonction qui retourne une couleur 
+complémentaire et éclairci de la couleur donnée en argument. */
+.copy {
+  color: violet;
+  background-color: lighten #82ee82, 5%;
+}
+
+.copy {
+  width: 5rem;
+  height: 5rem;
+  /* @if permet d'indiquer des propriétés qui ne seront activé qu'à certaines conditions. Ici, seulement si $w et $h sont égaux. */
+  border-radius: 50%;
+}
+
+.menu {
+  width: 200px;
+  height: 100px;
+  /* @if permet d'indiquer des propriétés qui ne seront activé qu'à certaines conditions. Ici, seulement si $w et $h sont égaux. */
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style2.css.map */

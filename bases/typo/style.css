@@ -1,0 +1,57 @@
+/* @font-face permet d'importer une police d'écriture.Font-family permet de nommer notre nouvelle police. src permet de trouver la police */
+
+@font-face{
+    font-family: "BlakaHollow";
+    src: url("./BlakaHollow-Regular.ttf");
+}
+
+/* L'élément root est la racine de notre document, il est majoritairement utilisé pour y placer les variables CSS. Une variable CSS
+C'est une propriété qui contient une valeur de notre cchoix et qui pourra etre réutilisé à plusieurs endroits de notre code. Un nom variable commence par " --"*/
+:root{
+
+    --mainBgColor: #654126;
+    --mainTextColor:#120215 ;
+    --divTextSize: 0.8rem;
+    --mainFont: BlakaHollow, monospace; 
+}
+
+body {
+    background-color: aquamarine;
+}
+.target1 {
+    background-color: var(--mainBgColor);
+    color: var(--mainTextColor);
+    font-size: var(--divTextSize);
+    font-family: var(--mainFont);
+}
+.target2{
+    background-color:(140,85,70);
+    color: rgb(78,132,85);
+    font-size: 2em;
+}
+.target3{
+    background-color: rgba( 74,85,96,0.7);
+    font-size: 1.5cm;
+}
+.target4{
+    background-color: hsl(340, 50%, 80%);
+}
+.target5{
+    background-color: hsla(125, 52%, 70%, 0.85);
+}
+.target6{
+font-size: 10vmin;
+}
+
+.target7{ font-size: 10vmin;
+
+}
+
+    .target8{ font-size:  5vmax; ;
+
+    }
+/* Clamp permet d'avoir une taille variable mais avec un minimum et un maximum, ici le text fera 10vg avec un minimum de 20px et un maximum de 40px*/
+    .target9{
+        font-size: clamp(20px,20vh,40px);
+    }
+

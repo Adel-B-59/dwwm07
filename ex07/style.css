@@ -1,0 +1,144 @@
+.but{ 
+    font-size: 1.5rem;
+    padding: 0.7rem 1rem;
+    margin-top: 2rem;
+    display:inline-block
+    
+}
+
+.but1{
+
+    border: 4px solid #999;
+    color: #999;
+    transition-property: border-color, color, background-color, transform;
+    transition-duration:0.5s,0.5s,0.5s,0.5s;
+    transform: rotate(0);
+}
+
+.but1{
+
+    border-color: #ca1919;
+    color: #ca1919;
+    background-color: antiquewhite;
+    transform: rotate(360deg);
+    transition-property: border-color, color, background-color;
+    transition: 2s;
+}
+.but2{ 
+    
+    background-color: antiquewhite;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    transition: 0.5s;
+    border: 2px solid #ca1919;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+}
+
+.but2 span{
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    margin: 0.3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    line-height: 1.7rem;
+    background-color: transparent;
+    text-align: center;
+    transition: all 0.5s;
+
+}
+
+.but2 :hover{
+ border-color: #fff;
+
+}
+
+.but2:hover span{
+color: aqua;
+transform: rotate(360);
+
+}
+
+.but3{
+   background-color: cornflowerblue;
+   color: #fff;
+    position: relative;
+    top: -5px;
+    padding: 0.75rem 1.2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 10px 10px 10px #8415;
+    transition-property: top, box-shadow;
+    transition-duration: 0.2s, 0.2s,1s;
+}
+
+.but3:hover{
+    top: 0;
+    box-shadow: 5px 5px 5px 0px rgba(26, 161, 26, 0.133);
+
+}
+
+.but3.focus{
+    transition-property: top, box-shadow,transform;
+    transform: rotateX(360deg);
+}
+.but4{
+    
+  position: relative;
+    font-size: 1.25rem;
+    color: #520;
+    padding: 0.1rem;
+    text-align: center;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+
+}
+
+.but4::before, .but4::after, {
+
+    position:absolute;
+    display: block;
+    content: "";
+    width: 0;
+    border-top: 4px solid #888;
+    transition-property: width;
+    transition-duration: 0.5s;
+
+}
+
+.but4::before{
+    top: -3px;
+    left: 0;
+}
+
+.but4::after {
+
+    bottom: -3px;
+    right: 0;
+}
+
+.but4:hover{
+
+    color: burlywood;
+}
+
+.but4:hover::before, .but4:hover::after{
+
+    width: 100%;
+
+}
+
+.but4:active{
+
+    color: #4711;
+}
+
+.but4:active::before, .but4:active::after{
+    border-color: darkslateblue;
+}

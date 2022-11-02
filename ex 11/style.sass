@@ -1,0 +1,130 @@
+// Définition de la liste (tableau indexé)
+$fruits: "banane", "cerise", "ananas", "pomme"
+// Boucle sur la liste pour générer les classes
+// Boucle pour chaque élément $fruit présents dans la liste $fruits
+@each $fruit in $fruits {
+    .fruit-#{$fruit} {
+      width: 50%
+    }
+}
+    // Création du mixin
+@mixin listWidth($list){
+  @each $element in $list {
+    .fruit-#{$element} {
+      width: 50%
+    }
+  }
+}
+// Test du mixin
+$fruits: "banane", "cerise", "ananas", "pomme"
+@include listWidth('fruit',$fruits)
+
+  // On peut maintenant générer d'autres classes CSS sur le même principe
+$animaux: "chat", "chien", "rat", "souris"
+@include listWidth('animal',$animaux)
+
+@function lastOfList($list){
+  @return nth($list, length($list))
+}
+$fruits: "banane", "cerise", "ananas", "pomme"
+.fruit::before{
+  content: lastOfList($fruits)
+}
+$villes: (lyon,"Lyon"), 
+         (paris,"Paris"), 
+         (marseille,"Marseille"), 
+         (rouen,"Rouen"), 
+         (bourg-de-peage,"Bourg de Péage")
+  
+@each $ville in $villes {
+  .ville-#{nth($ville,1)}::before {
+    display: block
+    content: "#{nth($ville,2)}" 
+  }
+}
+@mixin listWidth($list){
+  @each $element in $list {
+    .#{$prefix}-#{nth($element,1)}::before {
+      display: block
+      content: "#{nth($element,2)}" 
+    }
+  }
+}
+// Test du mixin
+$villes: (lyon,"Lyon"), 
+         (paris,"Paris"), 
+         (marseille,"Marseille"), 
+         (rouen,"Rouen"), 
+         (bourg-de-peage,"Bourg de Péage")
+@include addText('ville',$villes)
+@include addText('ville',$villes,'after')
+
+$social: (facebook,#3b5998) (flickr,#0063db) (linkedin,#007bb6) (twitter,#00aced) (vimeo,#aad450)(youtube,#bb0000)    
+
+@each $service in $social {
+    .social-#{nth($service,1)} {
+      color: #{nth($service,2)}
+      background-color: #{lighten(nth($service,2),10%)}
+    }
+}
+
+    @mixin colors($prefix,$list,$percent:30%){
+  @each $element in $list {
+    .#{$prefix}-#{nth($element,1)} {
+      color: #{nth($element,2)}
+      background-color: #{lighten(nth($element,2),$percent)}
+    }
+  }
+}
+// Test du mixin
+$social: (facebook,#3b5998),
+         (flickr,#0063db), 
+         (linkedin,#007bb6), 
+         (twitter,#00aced), 
+         (vimeo,#aad450),
+         (youtube,#bb0000)
+@include colors('social',$social,30%)
+@mixin colors($prefix,$list,$type:"light",$percent:30%){
+  @each $element in $list {
+    .#{$prefix}-#{nth($element,1)} {
+      color: #{nth($element,2)}
+      @if($type == "light") {
+        background-color: #{lighten(nth($element,2),$percent)}
+      } 
+      @else {
+        background-color: #{darken(nth($element,2),$percent)}
+      }
+    }
+  }
+}
+// Test du mixin
+$social: (facebook,#3b5998), 
+         (flickr,#0063db), 
+         (linkedin,#007bb6), 
+         (twitter,#00aced), 
+         (vimeo,#aad450),
+         (youtube,#bb0000)
+@include colors('social',$social,'light',30%)
+
+    $zodiac: (
+  "belier": "Bélier",
+  "taureau": "Taureau",
+  "gemeaux": "Gémeaux",
+  "cancer": "Cancer",
+  "lion": "Lion",
+  "vierge": "Vierge",
+  "balance": "Balance",
+  "scorpion": "Scorpion",
+  "sagittaire": "Sagittaire",
+  "capricorne": "Capricorne",
+  "verseau": "Verseau",
+  "poissons": "Poissons"
+)
+    @each $signe, $label in $zodiac {
+  .zodiac-#{$signe} {
+    background-image: url('#{$signe}.svg')
+  }
+  .zodiac-#{$signe}::after {
+    content: '#{$label}' 
+  }
+}

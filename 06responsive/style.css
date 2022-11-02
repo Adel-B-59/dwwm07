@@ -1,0 +1,35 @@
+body{
+    background-color: bisque;
+    margin: 0;
+}
+h1,h2 { text-align: center;}
+
+article{
+    margin: 1rem 10px;
+    border: 1px solid green;
+    padding: 0.5rem;
+
+}
+
+/* Les médias query permettent de déclencher des règles CSS sous certaines conditions. Elles sont principalement utlisé pour le responsive, c'est à dire pour adapter notre site
+ à toute taille d'écran. Elles ne sont pas prioritaire, les règles de priorités classiques s'appliquent. De nos jours, on conseil de développer le site en version Mobile en 
+ premier puis de l'adapter ax appareils plus grand.*/
+
+@media screen and  (min-width: 200px) {
+article{
+    border: 2px solid rgb(19, 89, 240);
+    display: inline-block;
+    width: 45%;
+}
+}
+    
+@media screen and  (min-width: 900px) {
+    article {
+        width: 30%;
+    }
+}
+    
+@media print {
+/* Se déclenche si doit être imprimé*/
+    
+}

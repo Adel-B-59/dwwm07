@@ -1,0 +1,80 @@
+/* On place toutes les marges et padding à 0 pour ne pas avoir celles par défaut.*/
+
+*, ::before, ::after {
+
+    margin: 0;
+    padding: 0%;
+    /* limite la taille jusqu'à la bordure */
+    box-sizing:border-box;
+
+}
+
+header {
+
+    background-color: aqua;
+    background-image: url(../FHCSL_SUNSHINE_TW.jpg);
+    background-repeat: no-repeat ;
+    background-position: center ;
+    background-size: cover;
+}
+
+main{
+
+    background-color: blueviolet;
+}
+
+article{
+
+    width: 49%;
+    /* Changer la façon d'afficher un élément. */
+    display: inline-block;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px auto 10px auto;
+}
+
+h1 {
+    font-size: 42px;
+    text-align: center;
+    padding: 0.8em 0;
+}
+
+p{
+    font-size: 24px;
+    text-align: justify;
+
+}
+
+p::first-letter{
+    font-size: 2em;
+}
+
+footer{
+    background-color: darkorange;
+    min-height: 50px;
+}
+
+li {
+    display: inline-block;
+    background-color: gainsboro;
+    /* Faire la même taille*/
+    aspect-ratio: 1/1;
+    /* Arrondir */
+    border-radius: 50%;
+    padding: 1rem 5px;
+    margin-left: 4%;
+    /* Modifie les puces de a liste*/
+    list-style: none;
+}
+
+div{
+    width: 40vw;
+    max-height: 90vh;
+    margin: 5px auto;
+
+}
+img{
+    max-width: 90%;
+    object-fit: cover;
+}
+

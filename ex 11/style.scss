@@ -1,0 +1,31 @@
+.col-1 {
+    width: 25% ;
+}
+.col-2 {
+    width: 50% ;
+}
+.col-3 {
+    width: 75% ;
+}
+.col-4 {
+    width: 100% ;
+}
+
+    @for $i from 1 through 4 {
+        .col-#{$i} {
+            width: (100% / 4) * $i;
+        }
+    }
+
+    @mixin cols($nbcol){
+        @for $i from 1 through  $nbcol{
+          .col-#{$i} {
+              width: (100% / $nbcol) * $i;
+          }
+        }
+      }
+        
+    
+
+
+    

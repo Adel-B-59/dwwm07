@@ -1,0 +1,77 @@
+*,::before, ::after{
+    margin:0;
+    padding: 0;
+    box-sizing: absolute;
+
+    
+}
+
+ul{
+
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    transition: left 1s; 
+}
+li {
+
+    margin: 1 rem 0;
+    display:inline-block ; 
+
+}
+button{
+
+    font-size: 3rem;
+    aspect-ratio: 1/1;
+}
+    input#burger { 
+
+    display :none;
+}
+
+li:nth-child(1) button { background-color: aliceblue;
+transition-duration: 1s,2s;
+transition-delay: 0.5s;
+transition-timing-function: cubic-bezier(1,0,0,1);
+}
+
+li:nth-child(1)
+button:hover{background-color: blueviolet;
+    transform: rotate(180deg);
+
+} 
+    
+
+label[for="burger"] {
+font-size: 3rem;
+}
+input#burger:checked~ ul{
+left: 50%;}
+
+
+
+ li:nth-child(2) button{
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: steps ( 5,jump start ),
+ }
+li:nth-child(2) button:hover{border-radius: 50%;}
+li:nth-child(3) button{
+    transition: all 1s;
+}
+li:nth-child(3) button:active{
+    box-shadow: 10px 50px 10px 50px red;
+}
+li:nth-child(4) button{
+    transition: all 1s;
+}
+li:nth-child(4):hover button{
+    transform: scale(0.5);
+}
+input#burger{
+    display: none;
+}
+input#burger:checked ~ ul {
+    left: 50%;
+}

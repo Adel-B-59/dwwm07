@@ -1,0 +1,341 @@
+@font-face {
+    font-family: catamaran ;
+    src: url(../Catamaran/static/Catamaran-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: catamaran ;
+    src: url(../Catamaran/static/Catamaran-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Grand;
+    src: url(../Grand_Hotel/GrandHotel-Regular.ttf);
+}
+
+
+*,::before, ::after {
+
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+
+    background-image: url(../main-bcg.jpeg);
+     background-repeat: no-repeat;    
+     background-size: cover;
+     background-position: center;
+     height: 80vh;
+
+}
+
+h3 {
+
+    color:green;
+    font-family: Grand;
+    font-size: 40px;
+}
+
+.logo{
+
+    text-align: center;
+      
+
+   }
+
+   
+.learn{
+
+    text-align: center;
+    margin-right: 400px;
+    width: 100px;
+}
+
+
+.read{
+
+    text-align: center;
+    grid-column-start: 1;
+    grid-row-start: 4;
+
+}
+
+.reada{
+    text-align: center;
+    grid-column-start: 2;
+    grid-row-start: 4;
+
+
+}
+
+
+.ready{
+    text-align: center;
+    grid-column-start: 3;
+    grid-row: 5 ;
+
+}
+.truc{
+   grid-column-start: 1;
+   grid-row-start: 4;
+   text-align: center;
+
+}
+
+.bidule{
+
+text-align: center;
+grid-row-start: 4;
+grid-column-start: 1;
+}
+
+
+.plouf{
+
+    grid-column-start: 3;
+    grid-row-start: 4;
+   text-align: center;
+
+}
+
+p{
+
+    font-family: catamaran;
+}
+button{
+
+    color: white;
+    background-color: green;
+    font-family: catamaran;
+}
+
+h4{
+
+    font-size: 20px;
+    
+}
+
+footer {
+
+    background-color:black ;
+    height: 100px;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+.menu{
+
+    left: auto;
+    margin-right: 1900px;
+}
+
+.proun{
+
+    margin-bottom: 20px;
+
+}
+
+span{
+
+    color: green;
+    font-size: 45px;
+    text-align: center;
+}
+
+.inventory{
+
+    text-align:left;
+    margin-right: 400px;
+    width: 100px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+}
+
+.gros
+
+{
+
+margin-left: 1500px;
+height: 200px;
+}
+
+.nul{
+
+    text-align: center;
+}
+
+.check {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+}
+
+
+.zero{
+
+    display: grid;
+    grid-template-columns: repeat( 4,25%);
+    margin-top: 100px;
+
+}
+
+.grid{
+
+    display: grid;
+    
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(4, auto);
+       
+        margin-top: 100px;
+    
+    }
+
+    .six{
+        display: grid;
+            grid-template-rows: repeat(4, auto);
+           grid-template-columns: repeat(3, 1fr);
+            margin-top: 100px;
+        
+           }
+
+           .gridy{
+
+            display: grid;
+        
+            grid-template-columns: repeat(4, 20%);
+            grid-template-rows: repeat(4, auto);
+            margin-top: 100px;
+            
+        
+           }
+        
+.premier{
+
+    text-align: center;
+    margin-top: 250px;
+
+}
+
+.second{
+
+    text-align: center;
+    margin-right: 400px;
+    
+   }
+
+   .dernier{
+
+    text-align: center;
+
+   }
+
+.un{
+    display: grid;
+
+}
+
+.deux{ display: grid;
+
+}
+
+
+.trois{
+    display: grid;
+
+}
+
+.quatre{
+        display: grid;
+    
+    }
+
+    p{
+font-size: 15px;
+justify-content: center;
+
+    }
+
+    .onze{
+
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .douze{
+
+        width: 150px;
+        height: 50px;
+        margin-top: 40px;
+    }
+    
+
+   .quatorze{
+
+    text-align: center;
+    margin-right: 400px;
+
+   }
+
+
+.vingt{
+
+    margin-left:  200px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+   
+}
+
+.quarante{
+
+   
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.cinquante{
+
+    display: grid;
+   
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+}
+
+.soixante {
+    grid-column-start:1 ;
+    grid-row-start: 3;
+    text-align: center;
+}
+
+.quatrevingt{
+
+
+   grid-column-start:2 ;
+   grid-row-start: 3;
+   text-align: center;
+}
+
+.cent {
+    grid-column-start:3 ;
+    grid-row-start: 3;
+    text-align: center;
+}
+
+

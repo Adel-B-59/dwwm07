@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootsrap</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
+
+</head>
+<body class="bg-secondary">
+
+    <!--Bootstrap permet de créer la structure de base d'un site de façon responsive. Il "amorce" la construction du site. Son principe est d'utiliser les classes fournis 
+        pour appliquer le css sans toucher aux fichiers css.
+    
+    
+    Par exemple, on peut changer la couleur du "text" ou du "background" avec les classes "bg-primary" et "text-primary". Mais primary peut être changé par 
+ un des mots clefs suivants : secondary, info, success, light, dark, warning, danger... -->
+
+    <header class="container-fluid bg-primary" >
+
+        <!-- La classe container permet d'avoir une div responsive laissant un espace sur ces côtés tant que l'écran n'est pas trop petit. 
+        
+        On peut modifier le padding et le margin avec les classes "p-1" à "p-5" ( où "m" pour le margin ) auquel on peut ajouter des précisions comme "pb" 
+        pour padding-botoom ou "my" pour margin-top et margin-bottom-->
+
+    <div class="container pb-5">
+
+        <!-- Certaines classes de bootstrap peuvent se voir attribuer un breakpoint "-sm ". Ces breakpoints indique à partir de quelle largeur d'écran l'effet doit
+        être appliqué.
+    
+    Celles-ci sont en mobile first, aucun breakpoint rend la propriété accessible sur n'importe quelle taille, les breakpoints se déclenchent à partir d'une même 
+    largeur.
+
+ sm, md, lg, xl, xxl.-->
+
+    <h1 class="text-md-center text-warning">Apprenons bootstrap</h1>
+
+    </div>
+</header>
+
+
+<div class=" container bg-dark ">
+
+    <!-- Pour rendre les  sites responsives, bootstrap utilise un système de grille, celle-ci est souvent contenu dans un " container " puis chaque ligne de notre 
+    grille se trouve dans un "row."
+
+   La grille bootstrap est divisé en 12, on va donc utiliser ces valeurs pour indiquer la taille de nos éléments. 12 étant toute la largeur, 6 la moitié et ainsi
+   de suite.-->
+
+    <div class=" row"> 
+
+        <!--Ici j'indique que mon élément prends toute la largeur de la grille par défaut, puis si la taille dépasse un certain point, ne prend plus que la moitié 
+            et enfin si c'est assez largeur, plus qu'un tier.-->
+
+
+        <div class = "col-12 col-md-6 col-lg-4 p3"> 
+
+              <article class="bg-light text-dark p1">
+
+               <h2 class="text-center"> Titre important</h2>
+
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Beatae recusandae nisi, fugit ea modi, tempora autem repellat sunt voluptas,
+        cupiditate minus adipisci quis laudantium tempore laboriosam ipsum dignissimos ad dolor.
+
+        <br>
+        <!-- fst indique le font-style, fw le font-weight, fs la font-size, d permet de modifier le display -->
+
+
+ <span class=" text-danger fst-italic fw-solid fs-4 d-sm-none"> Message secret</span>
+</p>
+<!--Ici, on place notre élément en display flex et on applique le justify-content:center ;-->
+<div class ="d-flex justify-content-center">
+
+    <!-- On transforme notre lien en bouton de couleur verte avec une largeur de 75%-->
+    
+ <a href ="#" class="btn btn-success w-75"> Super bouton !</a>
+
+<!--
+    La documentation de bootstrap contient aussi plusieurs éléments préconstruit que l'on peut intégrer à notre site d'un copié/collé:
+
+    Carousel, modal, accordeon...
+-->
+
+
+
+
+</div>
+              </article>
+            
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
