@@ -1,0 +1,145 @@
+.premier{
+
+    
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 50px; 
+   
+      
+}
+
+.premier p {
+
+    margin-top: -110px;
+}
+
+p{
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+.pa{
+
+ text-align: center;
+ height: 10px;
+ border: 1px solid #333333;
+ width: 400px;
+ height: 140px;
+ overflow: hidden;
+
+}
+
+
+
+.image{
+ 
+position: absolute;
+top: -20px;
+left: 10px;
+
+
+
+}
+
+.image img{
+
+    width:150px;
+    height:100px ;
+
+
+}
+
+h1{
+
+    text-align:center;
+    margin: 150px;
+    height: 200px;
+    
+   
+}
+h2{
+
+ text-align: center ;
+ color:peachpuff;
+}
+.un{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color:peachpuff  ;
+   
+    text-align:center;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.skills {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.personnalitée{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.software{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.exp{
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+
+.etudes{
+    font-family: Arial, Helvetica, sans-serif;
+   
+    
+}
+
+body{
+
+    background-image:url(https://image.freepik.com/vector-gratis/plantilla-borde-marco-decorativo-diplomas-o-certificados_2967-59.jpg)  ;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    /* background-size: 1000px 1600px; */
+    height: 100vh;
+    overflow: hidden;
+    padding: 10vh 0 ;
+    box-sizing: border-box;
+}
+
+.container{
+
+overflow-y: auto;
+overflow-x: hidden;
+height: 100%;
+margin:  auto;
+max-width: 442px;
+border: 2px solid black;
+
+
+}
+
+header{
+
+    position: relative;
+}
+
+
+        
+ 
+ 
+        
+
+    

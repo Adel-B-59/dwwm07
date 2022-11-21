@@ -1,0 +1,115 @@
+*,::before ::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+p+img{
+
+    width: 30vh;
+    height: 300px;
+   margin-left: 80vw;
+}
+
+p{
+
+    text-align: center;
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+h3{
+
+    text-align: center;
+}
+.boutons {
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5vh;
+    height: 50px;
+    padding: 40px;
+ 
+    
+}
+
+body{
+
+    background-color: rgb(107, 106, 110);
+}
+
+.li{
+
+    margin-left: 60vw;
+    position: absolute;
+    right: 0;
+}
+
+
+.fin{
+
+    margin-left: 175vh;
+    padding: 10px;
+   
+}
+
+.logo {
+
+    width: 10vh;
+    height: 50px;
+    height: 100px;
+   
+}
+
+.logo img {
+position: relative;
+height: 100%;
+width: 100%;
+object-fit: contain;
+top: -200px;   
+}
+
+
+.modal button:first-of-type{
+    grid-column: 1/2;
+}
+.modal button:last-of-type{
+    grid-column: 2/3;
+}
+.modal{
+    background-color: rgb(73, 75, 70);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    min-height: 30vh;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 1rem;
+    border: 3px solid white;
+    box-shadow: 5px 5px rgba(91, 134, 26, 0.3);
+
+}
+
+.hidden{
+    display: none;
+}
+
+#searchbar {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    height: 30px;
+
+    /* transform: translate(-30%, -50%);   */
+    width: 80vh;
+    height: 70px;
+}
+

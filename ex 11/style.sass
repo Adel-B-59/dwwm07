@@ -128,3 +128,90 @@ $social: (facebook,#3b5998),
     content: '#{$label}' 
   }
 }
+    // Seconde présentation possible plus lisible :
+$zodiac2: (
+  "belier": (
+    "label": "Bélier",
+    "debut": "21/03",
+    "fin": "20/04"
+  ),
+  "taureau": (
+    "label": "Taureau",
+    "debut": "21/04",
+    "fin": "21/05"
+  ),
+  "gemeaux": (
+    "label": "Gémeaux",
+    "debut": "22/05",
+    "fin": "21/06"
+  ),
+  "cancer": (
+    "Cancer": "",
+    "debut": "2206",
+    "fin": "22/07"
+  ),
+  "lion": (
+    "label": "Lion",
+    "debut": "2307",
+    "fin": "22/08"
+  ),
+  "vierge": (
+    "label": "Vierge",
+    "debut": "23/08",
+    "fin": "22/09"
+  ),
+  "balance": (
+    "label": "Balance",
+    "debut": "23/09",
+    "fin": "22/10"
+  ),
+  "scorpion": (
+    "label": "Scorpion",
+    "debut": "23/10",
+    "fin": "22/11"
+  ),
+  "sagittaire": (
+    "label": "Sagittaire",
+    "debut": "23/11",
+    "fin": "21/12"
+  ),
+  "capricorne": (
+    "label": "Capricorne",
+    "debut": "22/12",
+    "fin": "20/01"
+  ),
+  "verseau": (
+    "label": "Verseau",
+    "debut": "21/01",
+    "fin": "19/02"
+  ),
+  "poisson": (
+    "label": "Poissons",
+    "debut": "20/02",
+    "fin": "20/03"
+  )
+)
+
+    $zodiac2: (
+  "belier" : ("label" : "Bélier", "debut" : "21/03", "fin" : "20/04"),
+  "taureau" : ("label" : "Taureau", "debut" : "21/04", "fin" : "21/05"),
+  "gemeaux" : ("label" : "Gémeaux", "debut" : "22/05", "fin" : "21/06"),
+  "cancer" : ("Cancer" : "", "debut" : "2206", "fin" : "22/07"),
+  "lion" : ("label" : "Lion", "debut" : "2307", "fin" : "22/08"),
+  "vierge" : ("label" : "Vierge", "debut" : "23/08", "fin" : "22/09"),
+  "balance" : ("label" : "Balance", "debut" : "23/09", "fin" : "22/10"),
+  "scorpion" : ("label" : "Scorpion", "debut" : "23/10", "fin" : "22/11"),
+  "sagittaire" : ("label" : "Sagittaire","debut" : "23/11", "fin" : "21/12"),
+  "capricorne" : ("label" : "Capricorne", "debut" : "22/12", "fin" : "20/01"),
+  "verseau" : ("label" : "Verseau", "debut" : "21/01", "fin" : "19/02"),
+  "poisson" : ("label" : "Poissons", "debut" : "20/02", "fin" : "20/03")
+ )
+@each $signe, $infos in $zodiac2 {
+  .zodiac-#{$signe}::before {
+    content: map-get($infos, "label")
+  }
+  .zodiac-#{$signe}::after {
+    content: 'Du #{map-get($infos, "debut")} au #{map-get($infos, "fin")}'
+  }
+}
+    

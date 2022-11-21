@@ -11,8 +11,10 @@ article{
 
 }
 
-/* Les médias query permettent de déclencher des règles CSS sous certaines conditions. Elles sont principalement utlisé pour le responsive, c'est à dire pour adapter notre site
- à toute taille d'écran. Elles ne sont pas prioritaire, les règles de priorités classiques s'appliquent. De nos jours, on conseil de développer le site en version Mobile en 
+/* Les médias query permettent de déclencher des règles CSS sous certaines conditions. Elles sont principalement utlisé pour le responsive,
+     c'est à dire pour adapter notre site
+ à toute taille d'écran. 
+ Elles ne sont pas prioritaire, les règles de priorités classiques s'appliquent. De nos jours, on conseil de développer le site en version Mobile en 
  premier puis de l'adapter ax appareils plus grand.*/
 
 @media screen and  (min-width: 200px) {

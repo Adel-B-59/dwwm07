@@ -1,0 +1,59 @@
+*, ::before, ::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    --fond: antiquewhite ;
+    --text: #333;
+    --color:#4D4D4D ;
+}
+
+body{
+
+    background-color: var(--fond);
+    color: var(--text);
+}
+
+h1{
+
+    text-align: center;
+}
+
+main{
+
+    padding: 20px 10%;
+}
+
+main p {
+
+    text-align: justify;
+}
+
+.switch{
+
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.dark{
+
+    background-color: #333;
+    color:aliceblue ;
+}
+
+.Light {
+
+    color: #333;
+    background-color: white;
+}
+
+.Neutral {
+     color: white;
+    background-color: grey;
+}

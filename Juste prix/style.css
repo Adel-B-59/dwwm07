@@ -1,0 +1,68 @@
+*, ::before::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+
+    background-color: black;
+}
+
+h1 {
+
+    color: aliceblue;
+
+}
+.card {
+    width: 600px; 
+    margin: 0px auto; 
+    background-color: white; 
+  
+  }
+  
+  .card-image {
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-image img {
+    width: 120%;
+      
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: grayscale(1);
+    transition-property: filter width; 
+    transition-duration: .3s;
+    transition-timing-function: ease;
+  }
+
+.card-title {
+
+text-align: center;
+  }
+
+  button{
+    
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+  }
+
+  .intro {
+
+    text-align: center;
+    padding: 30px;
+  }
+
+  input {
+
+    height: 50px;
+    font-size: 20px;
+  }
